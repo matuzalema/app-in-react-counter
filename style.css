@@ -1,0 +1,46 @@
+body {
+	background-color: #80808036;
+}
+#app{
+	width: 70%;
+	background-color: grey;
+	color: white;
+	margin: 50px auto;
+	font-family: arial;
+	padding-bottom: 20px;
+	border-radius: 3px;
+}
+
+.counter{
+	background-color: #262323ad;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin: 20px auto;
+	border-radius: 3px;
+}
+
+.counter button {
+	background-color: #efff00e0;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-radius: 3px;
+	color: #262323f2;
+}
+
+.counter button:focus{
+	outline: none;
+}
+
+h1, h2 {
+	text-align: center;
+	padding: 30px;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+h1 {
+	font-size: 24px;
+}
