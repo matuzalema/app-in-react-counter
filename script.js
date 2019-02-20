@@ -15,29 +15,30 @@ var Counter = React.createClass({
 			counter: this.state.counter + 1
 		});
 	},
+
 	decrement: function(){
 		this.setState({
 			counter: this.state.counter - 1
 		});
 	},
+
 	componentWillMount: function(){
-		console.log('bardzo rzadko jest używana, ale cieżko znaleźć inf do czego konkretnie służy');
+		console.log('bardzo rzadko jest używana');
 	},
 
 	render: function(){
-		 return (
-		 	React.createElement('div', {'className': 'counter'},
-		 		React.createElement('h2', {}, 'licznik: ' + this.state.counter),
-		 		React.createElement('button', {onClick: this.increment}, 'dodaj'),
-		 		React.createElement('button', {onClick: this.decrement}, 'odejmij')
-		 	)
-		 );
+        return (
+        	React.createElement('div', {'className': 'counter'},
+        		React.createElement('h2', {}, 'licznik: ' + this.state.counter),
+        		React.createElement('button', {onClick: this.increment}, 'dodaj'),
+        		React.createElement('button', {onClick: this.decrement}, 'odejmij')
+        	)
+        );
 	},
 
 	componentDidMount: function(){
 		console.log('aktualizacja stanu komponentu, wywołanie AJAX, pobieranie danych, użycie jQuery');
 	},
-
 
 	componentWillReceiveProps: function(){
         console.log('np sprawdzenie, czy odświeżenie nastąpiło w wyniku zmiany obiektu this.props (a props jeszcze nie jest zaktualizowany, wywołanie this.setState()');
@@ -57,10 +58,10 @@ var Counter = React.createClass({
 	componentDidUpdate: function(){
 		console.log('po zmianach, teraz możliwa jest zmiana DOM');
 	},
+
 	componentWillUnmount: function(){
 		console.log('czyszczenie komponentu np. anulowanie subskrypcji, żądań serwera, usunicie nasłuchiwania zdarzeń');
 	}
-
 });
 
 var element = React.createElement('div', {}, 
@@ -69,4 +70,5 @@ var element = React.createElement('div', {},
     React.createElement(Counter, {}),
     React.createElement(Counter,{})
     );
+
 ReactDOM.render(element, document.getElementById('app'));
