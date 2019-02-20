@@ -1,7 +1,7 @@
 var Counter = React.createClass({
     getDefaultProps: function(){
         console.log('ustawianie domyślnych propsów jeśli nie są przekazane do komponentu');
-	},
+    },
 
     getInitialState: function() {
         console.log('początkowy stan komponentu');
@@ -24,7 +24,7 @@ var Counter = React.createClass({
 
     componentWillMount: function(){
         console.log('bardzo rzadko jest używana');
-	},
+    },
 
     render: function(){
         return (
@@ -37,29 +37,27 @@ var Counter = React.createClass({
     },
 
     componentDidMount: function(){
-		console.log('aktualizacja stanu komponentu, wywołanie AJAX, pobieranie danych, użycie jQuery');
-	},
+        console.log('aktualizacja stanu komponentu, wywołanie AJAX, pobieranie danych, użycie jQuery');
+    },
 
     componentWillReceiveProps: function(){
         console.log('np sprawdzenie, czy odświeżenie nastąpiło w wyniku zmiany obiektu this.props (a props jeszcze nie jest zaktualizowany, wywołanie this.setState()');
-	},
+    },
 
     shouldComponentUpdate: function(){
         console.log('true/false, np sprawdzenie, czy nowy this.props jest taki sam jak stary, jeśli tak to zwróci false i kolejne metody cyklu beda anulowanie');
         return true;
-	},
+    },
 
     componentWillUpdate: function(){
         console.log('jeśli shouldComponentUpdate zwróci true to odpali sie używa sie np do animacji i przygotowania zmian w DOM');
-	},
-	
-	// renderuje
+    },
 
-	componentDidUpdate: function(){
+    componentDidUpdate: function(){
         console.log('po zmianach, teraz możliwa jest zmiana DOM');
-	},
+    },
 
-	componentWillUnmount: function(){
+    componentWillUnmount: function(){
         console.log('czyszczenie komponentu np. anulowanie subskrypcji, żądań serwera, usunicie nasłuchiwania zdarzeń');
     }
 });
