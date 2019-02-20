@@ -32,9 +32,9 @@ var Counter = React.createClass({
                 React.createElement('h2', {}, 'licznik: ' + this.state.counter),
         		React.createElement('button', {onClick: this.increment}, 'dodaj'),
         		React.createElement('button', {onClick: this.decrement}, 'odejmij')
-        	)
+            )
         );
-	},
+    },
 
     componentDidMount: function(){
 		console.log('aktualizacja stanu komponentu, wywołanie AJAX, pobieranie danych, użycie jQuery');
